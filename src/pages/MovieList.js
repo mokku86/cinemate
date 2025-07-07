@@ -1,7 +1,7 @@
 export const MovieList = () => {
   return (
     <main>
-        <div>MovieList</div>
+        <div className="">MovieList</div>
     </main>
   )
 }
