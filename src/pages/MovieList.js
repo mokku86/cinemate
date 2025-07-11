@@ -18,7 +18,7 @@ export const MovieList = ({apiPath}) => {
   return (
     <main>
       <section className="py-7">
-        <div className="grid justify-items-center grid-cols-[repeat(auto-fill,_minmax(360px,_1fr))] gap-4">
+        <div className="grid justify-center grid-cols-[repeat(auto-fill,_minmax(360px,_400px))] gap-4">
           
           { movies.map((movie) => (
             <Card key={movie.id} movie={movie} />
