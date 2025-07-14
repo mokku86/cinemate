@@ -56,11 +56,11 @@ export const MovieDetail = () => {
 
               {/* info */}
               <ul className="list-none my-4">
-                <li className="mb-2"><span className="font-bold">Runtime:</span> <span className="text-gray-500 dark:text-slate-500">{movie.runtime}</span></li>
-                <li className="mb-2"><span className="font-bold">Budget:</span> <span className="text-gray-500 dark:text-slate-500">{movie.budget}</span></li>
-                <li className="mb-2"><span className="font-bold">Revenue:</span> <span className="text-gray-500 dark:text-slate-500">{movie.revenue}</span></li>
-                <li className="mb-2"><span className="font-bold">Release Date:</span> <span className="text-gray-500 dark:text-slate-500">{movie.release_date}</span></li>
-                <li className="mb-2"><span className="font-bold ">IMDB Code:</span> <a href={`https://www.imdb.com/title/${movie.imdb_id}`} target="_blank" rel="noreferrer" className="text-gray-500 underline dark:text-slate-500 hover:text-blue-500 dark:hover:text-blue-400">{movie.imdb_id}</a></li>
+                <li className="mb-2"><span className="font-bold">Runtime :</span> <span className="text-gray-500 dark:text-slate-500">{movie.runtime}</span></li>
+                <li className="mb-2"><span className="font-bold">Budget :</span> <span className="text-gray-500 dark:text-slate-500">{movie.budget}</span></li>
+                <li className="mb-2"><span className="font-bold">Revenue :</span> <span className="text-gray-500 dark:text-slate-500">{movie.revenue}</span></li>
+                <li className="mb-2"><span className="font-bold">Release Date :</span> <span className="text-gray-500 dark:text-slate-500">{movie.release_date}</span></li>
+                <li className="mb-2"><span className="font-bold ">IMDB Code :</span> <a href={`https://www.imdb.com/title/${movie.imdb_id}`} target="_blank" rel="noreferrer" className="text-gray-500 underline dark:text-slate-500 hover:text-blue-500 dark:hover:text-blue-400">{movie.imdb_id}</a></li>
               </ul>
             </div>
           </div>
