@@ -1,21 +1,26 @@
 import { useState, useEffect } from "react";
+import { useTitle } from "../hooks";
 import { useParams } from "react-router-dom";
 import Default from "../assets/images/default.jpg";
 
 export const MovieDetail = () => {
   const params = useParams();
   const [movie, setMovie] = useState({});
+  const pageTitle = useTitle(movie.title || 'Loading...');
   const image = movie.poster_path ? `https://media.themoviedb.org/t/p/w440_and_h660_face${movie.poster_path}` : Default;
 
   useEffect(() => {
     async function fetchMovie() {
       const respon = await fetch(`https://api.themoviedb.org/3/movie/${params.id}?api_key=${process.env.REACT_APP_API_KEY}`);
       const json = await respon.json();
+
+      //update movie in useState
       setMovie(json);
-      console.log(json.genres);
     }
     fetchMovie();
   }, []);
+  
+  
   return (
     <main>
         <section>

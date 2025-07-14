@@ -1,7 +1,10 @@
+import { useEffect } from "react";
 import { Card } from "../components";
-import { useFetch } from "../hooks/useFetch";
+import { useFetch, useTitle } from "../hooks/";
 
-export const MovieList = ({apiPath}) => {
+export const MovieList = ({apiPath, title}) => {
+  const pageTitle = useTitle(title);
+
   //this is destructuring with aliasing
   const { data:movies } = useFetch(apiPath);
   //data:movies = data is an return result from useFetch, and the values of data will be call movies from now on.
@@ -13,7 +16,6 @@ export const MovieList = ({apiPath}) => {
   //}
   //
   //so now the value from data which is [......] is stored into the var called movies
-
   
   return (
     <main>
