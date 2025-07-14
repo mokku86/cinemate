@@ -6,6 +6,8 @@ import Default from "../assets/images/default.jpg";
 export const MovieDetail = () => {
   const params = useParams();
   const [movie, setMovie] = useState({});
+  
+  //eslint-disable-next-line
   const pageTitle = useTitle(movie.title || 'Loading...');
   const image = movie.poster_path ? `https://media.themoviedb.org/t/p/w440_and_h660_face${movie.poster_path}` : Default;
 

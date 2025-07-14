@@ -3,7 +3,7 @@ import { Card } from "../components";
 import { useFetch, useTitle } from "../hooks/";
 
 export const MovieList = ({apiPath, title}) => {
-  const pageTitle = useTitle(title);
+  useTitle(title);
 
   //this is destructuring with aliasing
   const { data:movies } = useFetch(apiPath);
